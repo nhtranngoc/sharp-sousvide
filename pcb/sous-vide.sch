@@ -1,0 +1,465 @@
+EESchema Schematic File Version 4
+LIBS:sous-vide-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:Rotary_Encoder_Switch SW3
+U 1 1 5BE0DC5C
+P 10650 900
+F 0 "SW3" H 10650 1267 50  0000 C CNN
+F 1 "Rotary_Encoder_Switch" H 10650 1176 50  0000 C CNN
+F 2 "" H 10500 1060 50  0001 C CNN
+F 3 "~" H 10650 1160 50  0001 C CNN
+	1    10650 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J1
+U 1 1 5CBC7850
+P 900 1000
+F 0 "J1" H 820 675 50  0000 C CNN
+F 1 "Screw_Terminal_01x02" H 820 766 50  0000 C CNN
+F 2 "" H 900 1000 50  0001 C CNN
+F 3 "~" H 900 1000 50  0001 C CNN
+	1    900  1000
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:Fuse F1
+U 1 1 5CBC78EF
+P 1250 1000
+F 0 "F1" V 1053 1000 50  0000 C CNN
+F 1 "Fuse" V 1144 1000 50  0000 C CNN
+F 2 "" V 1180 1000 50  0001 C CNN
+F 3 "~" H 1250 1000 50  0001 C CNN
+	1    1250 1000
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:Fuse F2
+U 1 1 5CBC7971
+P 1550 1000
+F 0 "F2" H 1610 1046 50  0000 L CNN
+F 1 "Fuse" H 1610 955 50  0000 L CNN
+F 2 "" V 1480 1000 50  0001 C CNN
+F 3 "~" H 1550 1000 50  0001 C CNN
+	1    1550 1000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:Varistor RV1
+U 1 1 5CBC7B9F
+P 1800 950
+F 0 "RV1" H 1903 996 50  0000 L CNN
+F 1 "Varistor" H 1903 905 50  0000 L CNN
+F 2 "" V 1730 950 50  0001 C CNN
+F 3 "~" H 1800 950 50  0001 C CNN
+	1    1800 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Fuse F3
+U 1 1 5CBC7C94
+P 2650 900
+F 0 "F3" V 2453 900 50  0000 C CNN
+F 1 "Fuse" V 2544 900 50  0000 C CNN
+F 2 "" V 2580 900 50  0001 C CNN
+F 3 "~" H 2650 900 50  0001 C CNN
+	1    2650 900 
+	0    1    1    0   
+$EndComp
+$Comp
+L Passive:CAPP C1
+U 1 1 5CBC7DDA
+P 2800 1000
+F 0 "C1" H 2878 1038 40  0000 L CNN
+F 1 "CAPP" H 2878 962 40  0000 L CNN
+F 2 "" H 2800 1000 60  0000 C CNN
+F 3 "" H 2800 1000 60  0000 C CNN
+	1    2800 1000
+	1    0    0    1   
+$EndComp
+$Comp
+L Passive:CAPP C2
+U 1 1 5CBC7F1B
+P 2950 1000
+F 0 "C2" H 3028 1038 40  0000 L CNN
+F 1 "CAPP" H 3028 962 40  0000 L CNN
+F 2 "" H 2950 1000 60  0000 C CNN
+F 3 "" H 2950 1000 60  0000 C CNN
+	1    2950 1000
+	1    0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 5CBC7F57
+P 2950 1100
+F 0 "#PWR04" H 2950 850 50  0001 C CNN
+F 1 "GND" H 2955 927 50  0000 C CNN
+F 2 "" H 2950 1100 50  0001 C CNN
+F 3 "" H 2950 1100 50  0001 C CNN
+	1    2950 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L MCU_ST_STM32F0:STM32F030F4Px U3
+U 1 1 5CC6D358
+P 5750 3400
+F 0 "U3" H 5750 2514 50  0000 C CNN
+F 1 "STM32F030F4Px" H 5750 2423 50  0000 C CNN
+F 2 "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" H 5350 2700 50  0001 R CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00088500.pdf" H 5750 3400 50  0001 C CNN
+	1    5750 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR011
+U 1 1 5CC6D757
+P 5750 2600
+F 0 "#PWR011" H 5750 2450 50  0001 C CNN
+F 1 "VCC" H 5767 2773 50  0000 C CNN
+F 2 "" H 5750 2600 50  0001 C CNN
+F 3 "" H 5750 2600 50  0001 C CNN
+	1    5750 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 2600 5750 2700
+$Comp
+L power:GND #PWR012
+U 1 1 5CC6E4F8
+P 5750 4500
+F 0 "#PWR012" H 5750 4250 50  0001 C CNN
+F 1 "GND" H 5755 4327 50  0000 C CNN
+F 2 "" H 5750 4500 50  0001 C CNN
+F 3 "" H 5750 4500 50  0001 C CNN
+	1    5750 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 4200 5750 4500
+$Comp
+L Device:R R1
+U 1 1 5CC6EA62
+P 5050 3100
+F 0 "R1" V 4843 3100 50  0000 C CNN
+F 1 "10K" V 4934 3100 50  0000 C CNN
+F 2 "" V 4980 3100 50  0001 C CNN
+F 3 "~" H 5050 3100 50  0001 C CNN
+	1    5050 3100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5200 3100 5250 3100
+$Comp
+L Switch:SW_SPDT SW2
+U 1 1 5CC6EE0F
+P 4600 3100
+F 0 "SW2" H 4600 2775 50  0000 C CNN
+F 1 "SW_SPDT" H 4600 2866 50  0000 C CNN
+F 2 "" H 4600 3100 50  0001 C CNN
+F 3 "" H 4600 3100 50  0001 C CNN
+	1    4600 3100
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4800 3100 4900 3100
+$Comp
+L power:GND #PWR010
+U 1 1 5CC6F57C
+P 4400 3200
+F 0 "#PWR010" H 4400 2950 50  0001 C CNN
+F 1 "GND" H 4405 3027 50  0000 C CNN
+F 2 "" H 4400 3200 50  0001 C CNN
+F 3 "" H 4400 3200 50  0001 C CNN
+	1    4400 3200
+	0    1    1    0   
+$EndComp
+$Comp
+L power:VCC #PWR09
+U 1 1 5CC6F5C3
+P 4400 3000
+F 0 "#PWR09" H 4400 2850 50  0001 C CNN
+F 1 "VCC" V 4418 3127 50  0000 L CNN
+F 2 "" H 4400 3000 50  0001 C CNN
+F 3 "" H 4400 3000 50  0001 C CNN
+	1    4400 3000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:Conn_ARM_JTAG_SWD_10 J2
+U 1 1 5CC703E2
+P 1300 2150
+F 0 "J2" H 860 2196 50  0000 R CNN
+F 1 "Conn_ARM_JTAG_SWD_10" H 860 2105 50  0000 R CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_2x05_P1.27mm_Vertical_SMD" H 1350 1600 50  0001 L TNN
+F 3 "http://infocenter.arm.com/help/topic/com.arm.doc.faqs/attached/13634/cortex_debug_connectors.pdf" V 950 900 50  0001 C CNN
+	1    1300 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW1
+U 1 1 5CC72BD2
+P 4600 2450
+F 0 "SW1" H 4600 2735 50  0000 C CNN
+F 1 "SW_Push" H 4600 2644 50  0000 C CNN
+F 2 "" H 4600 2650 50  0001 C CNN
+F 3 "" H 4600 2650 50  0001 C CNN
+	1    4600 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Passive:CAP C5
+U 1 1 5CC72C86
+P 4600 2600
+F 0 "C5" V 4408 2600 40  0000 C CNN
+F 1 "100nF" V 4484 2600 40  0000 C CNN
+F 2 "" H 4600 2600 60  0000 C CNN
+F 3 "" H 4600 2600 60  0000 C CNN
+	1    4600 2600
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR08
+U 1 1 5CC72D2F
+P 4400 2600
+F 0 "#PWR08" H 4400 2350 50  0001 C CNN
+F 1 "GND" V 4405 2472 50  0000 R CNN
+F 2 "" H 4400 2600 50  0001 C CNN
+F 3 "" H 4400 2600 50  0001 C CNN
+	1    4400 2600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4400 2450 4400 2600
+Wire Wire Line
+	4500 2600 4400 2600
+Connection ~ 4400 2600
+Wire Wire Line
+	4700 2600 4800 2600
+Wire Wire Line
+	4800 2600 4800 2450
+Connection ~ 4800 2450
+Text GLabel 4800 2350 1    50   Input ~ 0
+RST
+Wire Wire Line
+	4800 2350 4800 2450
+Text GLabel 2000 1850 2    50   Input ~ 0
+RST
+Wire Wire Line
+	1800 1850 2000 1850
+$Comp
+L power:GND #PWR01
+U 1 1 5CC76B46
+P 1250 2850
+F 0 "#PWR01" H 1250 2600 50  0001 C CNN
+F 1 "GND" H 1255 2677 50  0000 C CNN
+F 2 "" H 1250 2850 50  0001 C CNN
+F 3 "" H 1250 2850 50  0001 C CNN
+	1    1250 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1200 2750 1250 2750
+Wire Wire Line
+	1250 2750 1250 2850
+Connection ~ 1250 2750
+Wire Wire Line
+	1250 2750 1300 2750
+Text GLabel 2000 2050 2    50   Input ~ 0
+SWDCLK
+Text GLabel 2000 2150 2    50   Input ~ 0
+SWDIO
+Wire Wire Line
+	1800 2050 2000 2050
+Wire Wire Line
+	1800 2150 2000 2150
+Text GLabel 6450 4000 2    50   Input ~ 0
+SWDCLK
+Text GLabel 6450 3900 2    50   Input ~ 0
+SWDIO
+Wire Wire Line
+	6250 3900 6450 3900
+Wire Wire Line
+	6250 4000 6450 4000
+$Comp
+L power:VCC #PWR02
+U 1 1 5CC79367
+P 1800 1550
+F 0 "#PWR02" H 1800 1400 50  0001 C CNN
+F 1 "VCC" H 1817 1723 50  0000 C CNN
+F 2 "" H 1800 1550 50  0001 C CNN
+F 3 "" H 1800 1550 50  0001 C CNN
+	1    1800 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 2900 4800 2900
+Wire Wire Line
+	4800 2900 4800 2600
+Connection ~ 4800 2600
+$Comp
+L Regulator_Linear:LM1117-3.3 U2
+U 1 1 5CC7E154
+P 3800 900
+F 0 "U2" H 3800 1142 50  0000 C CNN
+F 1 "LM1117-3.3" H 3800 1051 50  0000 C CNN
+F 2 "" H 3800 900 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm1117.pdf" H 3800 900 50  0001 C CNN
+	1    3800 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VPP #PWR03
+U 1 1 5CC7E83A
+P 2950 900
+F 0 "#PWR03" H 2950 750 50  0001 C CNN
+F 1 "VPP" H 2965 1073 50  0000 C CNN
+F 2 "" H 2950 900 50  0001 C CNN
+F 3 "" H 2950 900 50  0001 C CNN
+	1    2950 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VPP #PWR05
+U 1 1 5CC7EF14
+P 3400 600
+F 0 "#PWR05" H 3400 450 50  0001 C CNN
+F 1 "VPP" H 3415 773 50  0000 C CNN
+F 2 "" H 3400 600 50  0001 C CNN
+F 3 "" H 3400 600 50  0001 C CNN
+	1    3400 600 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR07
+U 1 1 5CC7F00F
+P 4200 900
+F 0 "#PWR07" H 4200 750 50  0001 C CNN
+F 1 "VCC" V 4217 1028 50  0000 L CNN
+F 2 "" H 4200 900 50  0001 C CNN
+F 3 "" H 4200 900 50  0001 C CNN
+	1    4200 900 
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR06
+U 1 1 5CC7F0EA
+P 3800 1250
+F 0 "#PWR06" H 3800 1000 50  0001 C CNN
+F 1 "GND" H 3805 1077 50  0000 C CNN
+F 2 "" H 3800 1250 50  0001 C CNN
+F 3 "" H 3800 1250 50  0001 C CNN
+	1    3800 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D_Schottky D1
+U 1 1 5CC7F550
+P 3400 750
+F 0 "D1" V 3446 671 50  0000 R CNN
+F 1 "D_Schottky" V 3355 671 50  0000 R CNN
+F 2 "" H 3400 750 50  0001 C CNN
+F 3 "~" H 3400 750 50  0001 C CNN
+	1    3400 750 
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Passive:CAP C3
+U 1 1 5CC80270
+P 3400 1100
+F 0 "C3" H 3478 1138 40  0000 L CNN
+F 1 "4.7uF" H 3478 1062 40  0000 L CNN
+F 2 "" H 3400 1100 60  0000 C CNN
+F 3 "" H 3400 1100 60  0000 C CNN
+	1    3400 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Passive:CAP C4
+U 1 1 5CC80348
+P 4200 1100
+F 0 "C4" H 4278 1138 40  0000 L CNN
+F 1 "4.7uF" H 4278 1062 40  0000 L CNN
+F 2 "" H 4200 1100 60  0000 C CNN
+F 3 "" H 4200 1100 60  0000 C CNN
+	1    4200 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 900  3500 900 
+Wire Wire Line
+	3400 1250 3800 1250
+Wire Wire Line
+	3800 1200 3800 1250
+Connection ~ 3800 1250
+Wire Wire Line
+	3800 1250 4200 1250
+Wire Wire Line
+	4200 900  4100 900 
+Wire Wire Line
+	3400 1200 3400 1250
+Wire Wire Line
+	4200 1200 4200 1250
+Wire Wire Line
+	4200 1000 4200 900 
+Connection ~ 4200 900 
+Wire Wire Line
+	3400 1000 3400 900 
+Connection ~ 3400 900 
+Wire Wire Line
+	1100 900  1700 900 
+Wire Wire Line
+	1700 900  1700 800 
+Wire Wire Line
+	1700 800  1800 800 
+Wire Wire Line
+	1700 1000 1700 1100
+Wire Wire Line
+	1700 1100 1800 1100
+Wire Wire Line
+	1800 800  1900 800 
+Wire Wire Line
+	1900 800  1900 900 
+Connection ~ 1800 800 
+Wire Wire Line
+	1800 1100 1900 1100
+Wire Wire Line
+	1900 1100 1900 1000
+Connection ~ 1800 1100
+$Comp
+L Power_Supplies:HLK-PM03 U1
+U 1 1 5CBC76DA
+P 2200 950
+F 0 "U1" H 2200 1192 40  0000 C CNN
+F 1 "HLK-PM03" H 2200 1116 40  0000 C CNN
+F 2 "" H 1300 2300 60  0000 C CNN
+F 3 "" H 1300 2300 60  0000 C CNN
+	1    2200 950 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 1100 2950 1100
+Connection ~ 2950 1100
+Wire Wire Line
+	2800 900  2950 900 
+Connection ~ 2800 900 
+Connection ~ 2950 900 
+Wire Wire Line
+	2500 1000 2500 1100
+Wire Wire Line
+	2500 1100 2800 1100
+Connection ~ 2800 1100
+$EndSCHEMATC
